@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+
+    /*Colors*/
+    --clr-light : #f8fafc;
+    --clr-dark : #020617;
+
+    --clr-slate-100 : #f1f5f9;
+    --clr-slate-200 : #e2e8f0;
+    --clr-slate-300 : #cbd5e1;
+    --clr-slate-400 : #94a3b8;
+    --clr-slate-500 : #64748b;
+    --clr-slate-600 : #475569;
+    --clr-slate-700 : #334155;
+    --clr-slate-800 : #1e293b;
+    --clr-slate-900 : #0f172a;
+
+
+    --clr-blue-50 : #eff6ff;
+    --clr-blue-100 : #dbeafe;
+    --clr-blue-200 : #bfdbfe;
+    --clr-blue-300 : #93c5fd;
+    --clr-blue-400 : #60a5fa;
+    --clr-blue-500 : #3b82f6;
+    --clr-blue-600 : #2563eb;
+    --clr-blue-700 : #1d4ed8;
+    --clr-blue-800 : #1e40af;
+    --clr-blue-900 : #1e3a8a;
+    --clr-blue-950 : #172554;
+
+    --clr-emerald-500 : #424443;
+    --clr-emerald-600 : #059669;
+    --clr-emerald-700 : #047857;
+
+    --clr-yellow-400 : #facc15;
+    --clr-yellow-500 : #eab308;
+    --clr-yellow-600 : #ca8a04;
+
+    --clr-rose-400 : #fb7185;
+    --clr-rose-500 : #f43f5e;
+    --clr-rose-600 : #e11d48;
+    --clr-rose-700 : #be123c;
+    --clr-rose-800 : #9f1239;
+    --clr-rose-900 : #881337;
+
+    --clr-indigo-400 : #818cf8;
+    --clr-indigo-500 : #6366f1;
+    --clr-indigo-600 : #4f46e5;
+    --clr-indigo-700 : #4338ca;
+
+    --clr-border : #64748b4d;
+
+    --clr-sky-50: #f0f9ff;
+    --clr-sky-100 : #e0f2fe;
+    --clr-sky-200 : #bae6fd;
+    --clr-sky-300 : #7dd3fc;
+    --clr-sky-400 : #38bdf8;
+    --clr-sky-500 : #0ea5e9;
+    --clr-sky-600 : #0284c7;
+    --clr-sky-700 : #0369a1;
+    --clr-sky-800 : #075985;
+    --clr-sky-900 : #0c4a6e;
+    --clr-sky-950 : #082f49;
+
+    --clr-header-bg : hsla(229, 84%, 5%, 0.5);
+
+
+    
+    /*Sizes*/
+    --size-xxs: 0.5rem;
+    --size-xs: 0.75rem;
+    --size-sm: 0.875rem;
+    --size-base: 1rem;
+    --size-lg: 1.125rem;
+    --size-xl: 1.25rem;
+    --size-2xl: 1.5rem;
+    --size-3xl: 1.875rem;
+    --size-4xl: 2.25rem;
+    --size-5xl: 3rem;
+    --size-6xl: 3.75rem;
+    --size-7xl: 4.5rem;
+    --size-8xl: 6rem;
+    --size-9xl: 8rem;
+    --size-10xl: 10rem;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+.glow {
+    position: absolute;
+}
+
+.glow-1 {
+    top: 0;
+    left: 80%;
+    box-shadow: 0 0 1000px 80px var(--clr-sky-500);
+}
+
+.glow-2 {
+    top: 50%;
+    left: 15%;
+    box-shadow: 0 0 1000px 80px var(--clr-indigo-500);
+}
+
+body {
+    background-color: var(--clr-dark);
+    color: var(--clr-slate-100);
+    overflow-x: hidden;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+body.light {
+    background-color: var(--clr-light);
+    --clr-slate-800 : hsl(217, 33%, 90%);
+    --clr-slate-100 : hsl(210, 40%, 15%);
+
+}
+
+body.light .title {
+    color: var(--clr-slate-900);
+}
+
+body.light .md-text {
+    color: var(--clr-slate-700);
+}
+
+body.light .sm-text {
+    color: var(--clr-slate-600);
+}
+
+body.light .description {
+    color: var(--clr-slate-500);
+}
+
+body.light header {
+    --clr-header-bg : hsla(229, 2%, 95%, 0.5);
+}
+
+body.light .btn {
+    color: var(--clr-light);
+}
+
+.container {
+    max-width: 1024px;
+    margin-inline: auto;
+    padding-inline: 0.5rem;
+}
+
+header {
+    width: 100%;
+    min-height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--clr-header-bg);
+    border-bottom: 1.5px solid var(--clr-slate-800);
+    backdrop-filter: blur(15px);
+} 
+
+.grid {
+    pointer-events: none;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: radial-gradient(circle, rgba(203, 213, 225, 0.116) 1px, #ffffff00 2px);
+    background-size: 2.5rem 2.5rem;
+    background-position: center center;
+}
+
+
+
+nav {
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80px;
+}
+
+.logo {
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+}
+
+.logo i {
+    font-size: 1.5rem;
+}
+
+.logo span {
+    color: var(--clr-sky-500);
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.links {
+    display: flex;
+    gap: 2rem;
+}
+
+.link a {
+    font-weight: 600;
+    color: var(--clr-slate-100);
+}
+
+.link a:hover , .actions i:hover {
+    color: var(--clr-sky-500);
+}
+
+
+.actions {
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 1.3rem;
+    border-left: 2px solid var(--clr-slate-700);
+    padding-left: 1.5rem;
+}
+
+.section {
+    margin-top: 8rem;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+.color-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.color-item {
+    position: relative;
+    cursor: pointer;
+    width: 90px;
+    height: 100px;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-slate-900);
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.color-item.active::before , .color-item.active::after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.color-item::before {
+    z-index: 3;
+    content: 'Copied';
+    width: 80%;
+    color: var(--clr-slate-100);
+    padding: 0.3rem 0;
+    border-radius: 0.5rem;
+    text-align: center;
+    position: absolute;
+    top: -40px;
+    transform: scale(0.8);
+    background-color: var(--clr-sky-500);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    opacity: 0;
+}
+
+/* .color-item::after {
+    z-index: 2;
+    content: '';
+    width: 15px;
+    height: 15px;
+    color: var(--clr-slate-100);
+    padding: 0.3rem 0;
+    text-align: center;
+    position: absolute;
+    top: -40px;
+    left: 45%;
+    transform: rotate(45deg);
+    background-color: var(--clr-sky-500);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    opacity: 0;
+} */
+
+.color-col {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.color-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* lg */
+@media (max-width: 1024px)
+ {
+    .container {
+        max-width: 768px;
+    }
+ }
+
+/* md */
+@media (max-width: 768px)
+ {
+    .container {
+        max-width: 576px;
+    }
+ }
+
+/* sm */
+@media (max-width: 576px)
+ {
+    .container {
+        width: 100%;
+    }
+ }
+
